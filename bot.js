@@ -6,7 +6,7 @@ var botID = process.env.BOT_ID;
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
       botRegex = /^\/cool guy/; botDuck = /^\/duck/;
-      botRegexTw = /^\/twitch/i; botRegexSh = /^\/shrug/; botRegexWk = /^\/users/; 
+      botRegexTw = /^\/twitch/i; botRegexSh = /^\/shrug/; 
       botRegexKys = /^\/kys/;
       botRegexSC = new RegExp("SC"); 
       botRegexClayton = /^\/Clayton/; 
@@ -31,11 +31,6 @@ function respond() {
   else if(request.text && botRegexSh.test(request.text)) {
     this.res.writeHead(200);
     postMessage("¯\\_(ツ)_/¯");
-    this.res.end();
-  } 
-  else if(request.text && botRegexWk.test(request.text)) {
-    this.res.writeHead(200);
-    postMessage("https://docs.google.com/spreadsheets/d/1zRLaUZ12vUOORFdNQbPCzJW5T0zFBrkth_osH9b7d34/edit?usp=drivesdk");
     this.res.end();
   } 
   else if(request.text && botDuck.test(request.text)) {
