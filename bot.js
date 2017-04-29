@@ -158,17 +158,6 @@ function respond() {
     postMessage("https://docs.google.com/forms/d/e/1FAIpQLSdrbe5iBRaBC7EWoodVm8z6285-dG2EdHXAOMOgz8md8T1jwQ/viewform");
     this.res.end();
   }
-  
-  //else if(request.text && botRegexSiege.test(request.text)) {
-    //this.res.writeHead(200);
-    //if(0.6 >= Math.random() > 0.3)
-      //postMessage(siege1);
-    //else if(Math.random() >0.6)
-      //postMessage(siege3)
-    //else
-      //postMessage(siege2);
-    //this.res.end();
-  //}
   else if(request.text && botSC.test(request.text)) {
     this.res.writeHead(200);
     if(0.6 >= Math.random() > 0.3)
