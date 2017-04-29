@@ -8,7 +8,6 @@ function respond() {
       botRegex = /^\/cool guy/; botRegexDL = /^\/DDL/i;botRegexRules = /^\/rules/
       botRegexAd=/^\/advance/; botODB = /(.*\s+)(.*odb)(\s+.*)/i; botDuck = /^\/duck/;
       botRegexTw = /^\/twitch/i; botRegexSh = /^\/shrug/; botRegexWk = /^\/users/; botRegexCC = /^\/cc/;
-      botRegexOW = /^\/ratings/; 
       botRegexProp = /^\/prop/; botRegexKys = /^\/kys/; botRegexSlam = /^\/slam/; botRegexBrye = /^\/brye/;
       botRegexGian = /^\/gian/; botRegexScrotes = /^\/scrotes/; botRegexShaki = /^\/shaki/;
       botRegexDaf = /^\/dafuq/; botRegexMA32 = /^\/pending/; botRegexTrade = /^\/trade/; botRegexSC = /^\/SC/;
@@ -66,12 +65,6 @@ function respond() {
     postMessage("http://daddyleagues.com/mcf/team/"+request.text.substring(5,8)+"/depthchart");
     this.res.end();
   } 
-  
-  else if(request.text && botRegexOW.test(request.text)) {
-    this.res.writeHead(200);
-    postMessage("www.daddyleagues.com/maddenrating/");
-    this.res.end();
-  } 
   else if(request.text && botRegexAd.test(request.text)) {
     this.res.writeHead(200);
     postMessage("http://www.hackcollege.com/wp-content/uploads/2013/02/kno_advance.jpg");
@@ -124,9 +117,9 @@ function respond() {
   }
   else if(request.text && botRegexSC.test(request.text)) {
     this.res.writeHead(200);
-    if(Math.random() < 0.3)
+    if (Math.random() < 0.3)
       postMessage("Sorry my dog has testicular cancer");
-    else if(Math.random() < 0.6)
+    else if (Math.random() < 0.6)
       postMessage("Fuckk I haven't studied a lick of bio")
     else
       postMessage("Sorry I'm going to the gym");
