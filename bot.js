@@ -8,8 +8,7 @@ function respond() {
       botRegex = /^\/cool guy/; botRegexDL = /^\/DDL/i;botRegexRules = /^\/rules/
       botRegexAd=/^\/advance/; botODB = /(.*\s+)(.*odb)(\s+.*)/i; botDuck = /^\/duck/;
       botRegexTw = /^\/twitch/i; botRegexSh = /^\/shrug/; botRegexWk = /^\/users/; botRegexCC = /^\/cc/;
-      botRegexProp = /^\/prop/; botRegexKys = /^\/kys/; botRegexSlam = /^\/slam/;
-      botRegexGian = /^\/gian/; botRegexScrotes = /^\/scrotes/; botRegexShaki = /^\/shaki/;
+      botRegexProp = /^\/prop/; botRegexKys = /^\/kys/; botRegexSlam = /^\/slam/; botRegexShaki = /^\/shaki/;
       botRegexDaf = /^\/dafuq/; botRegexMA32 = /^\/pending/; botRegexTrade = /^\/trade/; botRegexSC = new RegExp("SC"); 
       botRegexClayton = /^\/Clayton/; 
   if(request.text && botRegex.test(request.text)) {
@@ -39,16 +38,6 @@ function respond() {
   else if(request.text && botRegexDaf.test(request.text)) {
     this.res.writeHead(200);
     postMessage("http://i3.kym-cdn.com/photos/images/facebook/000/787/356/d6f.jpg");
-    this.res.end();
-  } 
-  else if(request.text && botRegexGian.test(request.text)) {
-    this.res.writeHead(200);
-    postMessage("http://i.imgur.com/9V6ZnvD.png");
-    this.res.end();
-  } 
-  else if(request.text && botRegexScrotes.test(request.text)) {
-    this.res.writeHead(200);
-    postMessage("https://i.groupme.com/1006x1340.jpeg.730381e4280e4028b8375432af14f39f.large");
     this.res.end();
   } 
   else if(request.text && botRegexShaki.test(request.text)) {
