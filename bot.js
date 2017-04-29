@@ -131,6 +131,7 @@ function respond() {
       postMessage("Sorry I'm going to the gym");
     this.res.end();
   else if(request.text && botRegexClayton.test(request.text)) { 
+    this.res.writeHead(200);
     postMessage("https://imgur.com/gallery/qOOvz");
   this.res.end();
   } 
