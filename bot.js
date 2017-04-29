@@ -178,7 +178,7 @@ function respond() {
   }
   else if(request.text && botRegexDaf.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("My dog has testicular cancer);
+    postMessage("My dog has testicular cancer");
     this.res.end();
   } 
   else {
