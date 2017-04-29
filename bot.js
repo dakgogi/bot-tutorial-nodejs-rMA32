@@ -7,8 +7,8 @@ function respond() {
   var request = JSON.parse(this.req.chunks[0]),
       botRegex = /^\/cool guy/; botRegexRules = /^\/rules/ botDuck = /^\/duck/;
       botRegexTw = /^\/twitch/i; botRegexSh = /^\/shrug/; botRegexWk = /^\/users/; 
-      botRegexKys = /^\/kys/; botRegexSlam = /^\/slam/; 
-      botRegexDaf = /^\/dafuq/; botRegexSC = new RegExp("SC"); 
+      botRegexKys = /^\/kys/;
+      botRegexSC = new RegExp("SC"); 
       botRegexClayton = /^\/Clayton/; 
   if(request.text && botRegex.test(request.text)) {
     this.res.writeHead(200);
@@ -21,16 +21,6 @@ function respond() {
       postMessage("http://www.wikihow.com/Tie-a-Noose");
     else
       postMessage("https://imgur.com/gallery/k1Ofl"); 
-    this.res.end();
-  } 
-  else if(request.text && botRegexSlam.test(request.text)) {
-    this.res.writeHead(200);
-    postMessage("https://pbs.twimg.com/profile_images/587294731471757313/ZpI5PfKq.jpg");
-    this.res.end();
-  } 
-  else if(request.text && botRegexDaf.test(request.text)) {
-    this.res.writeHead(200);
-    postMessage("http://i3.kym-cdn.com/photos/images/facebook/000/787/356/d6f.jpg");
     this.res.end();
   } 
   else if(request.text && botRegexRules.test(request.text)) {
