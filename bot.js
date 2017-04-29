@@ -5,7 +5,7 @@ var botID = process.env.BOT_ID;
 
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
-      botRegex = /^\/cool guy/; botRegexRules = /^\/rules/ botDuck = /^\/duck/;
+      botRegex = /^\/cool guy/; botDuck = /^\/duck/;
       botRegexTw = /^\/twitch/i; botRegexSh = /^\/shrug/; botRegexWk = /^\/users/; 
       botRegexKys = /^\/kys/;
       botRegexSC = new RegExp("SC"); 
@@ -21,11 +21,6 @@ function respond() {
       postMessage("http://www.wikihow.com/Tie-a-Noose");
     else
       postMessage("https://imgur.com/gallery/k1Ofl"); 
-    this.res.end();
-  } 
-  else if(request.text && botRegexRules.test(request.text)) {
-    this.res.writeHead(200);
-    postMessage("https://docs.google.com/document/d/1hSuEG7oplnx4IX6HGsMOjsWb9TCqC4-F1NLjuBz5PCM/edit");
     this.res.end();
   } 
   else if(request.text && botRegexTw.test(request.text)) {
