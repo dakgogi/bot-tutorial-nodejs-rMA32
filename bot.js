@@ -156,7 +156,7 @@ function respond() {
   else if(request.text && botSC.test(request.text)) {
     this.res.writeHead(200);
     if(Math.random() < 0.3)
-      postMessage("My dog has testicular cancer");
+      postMessage("Sorry my dog has testicular cancer");
     else if(Math.random() < 0.6)
       postMessage("Fuckk I haven't studied a lick of bio")
     else
