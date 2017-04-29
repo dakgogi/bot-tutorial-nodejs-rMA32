@@ -10,10 +10,8 @@ function respond() {
       botRegexTw = /^\/twitch/i; botRegexSh = /^\/shrug/; botRegexWk = /^\/users/; botRegexCC = /^\/cc/;
       botRegexProp = /^\/prop/; botRegexKys = /^\/kys/; botRegexSlam = /^\/slam/;
       botRegexGian = /^\/gian/; botRegexScrotes = /^\/scrotes/; botRegexShaki = /^\/shaki/;
-      botRegexDaf = /^\/dafuq/; botRegexMA32 = /^\/pending/; botRegexTrade = /^\/trade/; botRegexSC = new RegExp("SC"); botRegexClayton = /^\/Clayton/; 
-  var teamAb = ["NE","NO","ARI","PHI","CLE","TEN","OAK","DAL","IND","SEA","CIN","PIT","JAC"
-                ,"BAL","SD","DEN","MIN","ATL","KC","NYG","GB","DET","HOU","STL","CHI","CAR",
-                "MIA","BUF","SF","WAS","NYJ","TB"]
+      botRegexDaf = /^\/dafuq/; botRegexMA32 = /^\/pending/; botRegexTrade = /^\/trade/; botRegexSC = new RegExp("SC"); 
+      botRegexClayton = /^\/Clayton/; 
   if(request.text && botRegex.test(request.text)) {
     this.res.writeHead(200);
     postMessage(cool());
@@ -114,7 +112,7 @@ function respond() {
     postMessage("https://docs.google.com/forms/d/e/1FAIpQLSdrbe5iBRaBC7EWoodVm8z6285-dG2EdHXAOMOgz8md8T1jwQ/viewform");
     this.res.end();
   }
-  else if(request.text && botRegexSC.text(request.text)) {
+  else if(request.text && botRegexSC.test(request.text)) {
     this.res.writeHead(200);
     if (Math.random() < 0.2)
       postMessage("Sorry my dog has testicular cancer");
