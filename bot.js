@@ -7,7 +7,7 @@ function respond() {
   var request = JSON.parse(this.req.chunks[0]),
       botRegex = /^\/cool guy/; botRegexDL = /^\/DDL/i;botRegexRules = /^\/rules/
       botRegexAd=/^\/advance/; botODB = /(.*\s+)(.*odb)(\s+.*)/i; botDuck = /^\/duck/;
-      botRegexP = /^\/PDL/i;  botRegexTw = /^\/twitch/i; botRegexSh = /^\/shrug/; botRegexWk = /^\/users/; botRegexCC = /^\/cc/;
+      botRegexTw = /^\/twitch/i; botRegexSh = /^\/shrug/; botRegexWk = /^\/users/; botRegexCC = /^\/cc/;
       botRegexOW = /^\/ratings/; 
       botRegexProp = /^\/prop/; botRegexKys = /^\/kys/; botRegexSlam = /^\/slam/; botRegexBrye = /^\/brye/;
       botRegexGian = /^\/gian/; botRegexScrotes = /^\/scrotes/; botRegexShaki = /^\/shaki/;
@@ -82,15 +82,6 @@ function respond() {
     postMessage("https://docs.google.com/document/d/1hSuEG7oplnx4IX6HGsMOjsWb9TCqC4-F1NLjuBz5PCM/edit");
     this.res.end();
   } 
-  else if(request.text && botRegexP.test(request.text)) {
-    this.res.writeHead(200);
-    var req = request.text.substring(5,request.text.length);
-    var rep = req.replace(/ /,"+");
-    postMessage("http://daddyleagues.com/mcf/players?name="+rep+"&position=all&team=all");
-    
-    this.res.end();
-  }  
-
   else if(request.text && botRegexTw.test(request.text)) {
     this.res.writeHead(200);
     postMessage("http://www.twitch.tv/"+request.text.substring(8,request.text.length));
