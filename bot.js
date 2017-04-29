@@ -10,7 +10,7 @@ function respond() {
       botRegexTw = /^\/twitch/i; botRegexSh = /^\/shrug/; botRegexWk = /^\/users/; botRegexCC = /^\/cc/;
       botRegexProp = /^\/prop/; botRegexKys = /^\/kys/; botRegexSlam = /^\/slam/; botRegexBrye = /^\/brye/;
       botRegexGian = /^\/gian/; botRegexScrotes = /^\/scrotes/; botRegexShaki = /^\/shaki/;
-      botRegexDaf = /^\/dafuq/; botRegexMA32 = /^\/pending/; botRegexTrade = /^\/trade/; botRegexSC = new RegExp("SC");
+      botRegexDaf = /^\/dafuq/; botRegexMA32 = /^\/pending/; botRegexTrade = /^\/trade/; botRegexSC = new RegExp("SC"); botRegexClayton = /^\/Clayton/; 
   var teamAb = ["NE","NO","ARI","PHI","CLE","TEN","OAK","DAL","IND","SEA","CIN","PIT","JAC"
                 ,"BAL","SD","DEN","MIN","ATL","KC","NYG","GB","DET","HOU","STL","CHI","CAR",
                 "MIA","BUF","SF","WAS","NYJ","TB"]
@@ -130,6 +130,9 @@ function respond() {
     else
       postMessage("Sorry I'm going to the gym");
     this.res.end();
+  else if(request.text && botRegexClayton.test(request.text)) { 
+    postMessage("https://imgur.com/gallery/qOOvz");
+  this.res.end();
   } 
   else {
     console.log("don't care");
