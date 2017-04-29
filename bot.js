@@ -26,7 +26,11 @@ function respond() {
   }
   else if(request.text && botRegexKys.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("http://www.wikihow.com/Tie-a-Noose");
+    if (Math.random() < 0.5)
+      postMessage("http://www.wikihow.com/Tie-a-Noose");
+    else
+      postMessage("https://imgur.com/gallery/k1Ofl");
+    
     this.res.end();
   } 
   else if(request.text && botRegexSlam.test(request.text)) {
@@ -117,10 +121,12 @@ function respond() {
   }
   else if(request.text && botRegexSC.test(request.text)) {
     this.res.writeHead(200);
-    if (Math.random() < 0.3)
+    if (Math.random() < 0.2)
       postMessage("Sorry my dog has testicular cancer");
-    else if (Math.random() < 0.6)
+    else if (Math.random() < 0.4)
       postMessage("Fuckk I haven't studied a lick of bio")
+    else if (Math.random() < 0.6)
+      postMessage("Go step on some legos")
     else
       postMessage("Sorry I'm going to the gym");
     this.res.end();
