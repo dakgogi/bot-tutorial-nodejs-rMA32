@@ -5,22 +5,17 @@ var botID = process.env.BOT_ID;
 
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
-      botRegex = /^\/cool guy/; botRegexDL = /^\/DDL/i;botRegexRules = /^\/rules/
-      botRegexAd=/^\/advance/; botODB = /(.*\s+)(.*odb)(\s+.*)/i; botDuck = /^\/duck/;
+      botRegex = /^\/cool guy/; botRegexDL = /^\/DDL/i; botRegexRules = /^\/rules/ botDuck = /^\/duck/;
       botRegexTw = /^\/twitch/i; botRegexSh = /^\/shrug/; botRegexWk = /^\/users/; 
-      botRegexProp = /^\/prop/; botRegexKys = /^\/kys/; botRegexSlam = /^\/slam/; botRegexShaki = /^\/shaki/;
-      botRegexDaf = /^\/dafuq/; botRegexMA32 = /^\/pending/; botRegexSC = new RegExp("SC"); 
+      botRegexKys = /^\/kys/; botRegexSlam = /^\/slam/; 
+      botRegexDaf = /^\/dafuq/; botRegexSC = new RegExp("SC"); 
       botRegexClayton = /^\/Clayton/; 
   if(request.text && botRegex.test(request.text)) {
     this.res.writeHead(200);
     postMessage(cool());
     this.res.end();
   }
-  else if(request.text && botRegexProp.test(request.text)) {
-    this.res.writeHead(200);
-    postMessage("https://i.groupme.com/409x327.jpeg.08b5d95c51bb4897835cfe6b514f2f52.large");
-    this.res.end();
-  }
+
   else if(request.text && botRegexKys.test(request.text)) {
     this.res.writeHead(200);
     if (Math.random() < 0.5)
@@ -40,22 +35,12 @@ function respond() {
     postMessage("http://i3.kym-cdn.com/photos/images/facebook/000/787/356/d6f.jpg");
     this.res.end();
   } 
-  else if(request.text && botRegexShaki.test(request.text)) {
-    this.res.writeHead(200);
-    postMessage("https://i.groupme.com/305x375.jpeg.a8dd3aa18c7a4963a553e6dc16bcb100.large");
-    this.res.end();
-  } 
   else if(request.text && botRegexDL.test(request.text)) {
     this.res.writeHead(200);
     //postMessage("http://www.daddyleagues.com/maddenrating?name=&position=all&team="+request.text.substring(5,8));
     postMessage("http://daddyleagues.com/mcf/team/"+request.text.substring(5,8)+"/depthchart");
     this.res.end();
   } 
-  else if(request.text && botRegexAd.test(request.text)) {
-    this.res.writeHead(200);
-    postMessage("http://www.hackcollege.com/wp-content/uploads/2013/02/kno_advance.jpg");
-    this.res.end();
-  }
   else if(request.text && botRegexRules.test(request.text)) {
     this.res.writeHead(200);
     postMessage("https://docs.google.com/document/d/1hSuEG7oplnx4IX6HGsMOjsWb9TCqC4-F1NLjuBz5PCM/edit");
@@ -76,19 +61,9 @@ function respond() {
     postMessage("https://docs.google.com/spreadsheets/d/1zRLaUZ12vUOORFdNQbPCzJW5T0zFBrkth_osH9b7d34/edit?usp=drivesdk");
     this.res.end();
   } 
-  else if(request.text && botODB.test(request.text)) {
-    this.res.writeHead(200);
-    postMessage("OBJ*");
-    this.res.end();
-  } 
   else if(request.text && botDuck.test(request.text)) {
     this.res.writeHead(200);
     postMessage("http://media3.giphy.com/media/YCseTHF2I6CCA/giphy.gif");
-    this.res.end();
-  }
-  else if(request.text && botRegexMA32.test(request.text)) {
-    this.res.writeHead(200);
-    postMessage("https://docs.google.com/spreadsheets/d/12hVrn7ShR3An6bP5uBF3gaoTQQgVciC-0RqtWVZ39Ls/edit?usp=sharing");
     this.res.end();
   }
   else if(request.text && botRegexSC.test(request.text)) {
