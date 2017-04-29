@@ -5,7 +5,7 @@ var botID = process.env.BOT_ID;
 
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
-      botRegex = /^\/cool guy/; botRegexDL = /^\/DDL/i; botRegexRules = /^\/rules/ botDuck = /^\/duck/;
+      botRegex = /^\/cool guy/; botRegexRules = /^\/rules/ botDuck = /^\/duck/;
       botRegexTw = /^\/twitch/i; botRegexSh = /^\/shrug/; botRegexWk = /^\/users/; 
       botRegexKys = /^\/kys/; botRegexSlam = /^\/slam/; 
       botRegexDaf = /^\/dafuq/; botRegexSC = new RegExp("SC"); 
@@ -15,14 +15,12 @@ function respond() {
     postMessage(cool());
     this.res.end();
   }
-
   else if(request.text && botRegexKys.test(request.text)) {
     this.res.writeHead(200);
     if (Math.random() < 0.5)
       postMessage("http://www.wikihow.com/Tie-a-Noose");
     else
-      postMessage("https://imgur.com/gallery/k1Ofl");
-    
+      postMessage("https://imgur.com/gallery/k1Ofl"); 
     this.res.end();
   } 
   else if(request.text && botRegexSlam.test(request.text)) {
@@ -33,12 +31,6 @@ function respond() {
   else if(request.text && botRegexDaf.test(request.text)) {
     this.res.writeHead(200);
     postMessage("http://i3.kym-cdn.com/photos/images/facebook/000/787/356/d6f.jpg");
-    this.res.end();
-  } 
-  else if(request.text && botRegexDL.test(request.text)) {
-    this.res.writeHead(200);
-    //postMessage("http://www.daddyleagues.com/maddenrating?name=&position=all&team="+request.text.substring(5,8));
-    postMessage("http://daddyleagues.com/mcf/team/"+request.text.substring(5,8)+"/depthchart");
     this.res.end();
   } 
   else if(request.text && botRegexRules.test(request.text)) {
