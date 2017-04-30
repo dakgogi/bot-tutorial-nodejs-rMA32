@@ -65,7 +65,7 @@ function respond() {
     postMessage("https://imgur.com/gallery/qOOvz");
   this.res.end();
   } 
-   else if(request.text && botRegexMC.test(request.text)|| botMC1.test(request.text) || botMC2.test(request.text)) {
+   else if(request.text && botRegexMC.test(request.text) || botMC1.test(request.text) || botMC2.test(request.text)) {
     this.res.writeHead(200);
     postMessage("You guys take minecraft too seriously");
     this.res.end();
