@@ -11,7 +11,6 @@ function respond() {
       botRegexSC = new RegExp("SC"); 
       botSC1 = new RegExp("starcraft"); botSC2 = new RegExp("StarCraft"); 
       botRegexMC = new RegExp("MC"); 
-      botMC1 = new RegExp("minecraft"); 
       botRegexClayton = /^\/Clayton/; 
   if(request.text && botRegex.test(request.text)) {
     this.res.writeHead(200);
@@ -65,7 +64,7 @@ function respond() {
     postMessage("https://imgur.com/gallery/qOOvz");
   this.res.end();
   } 
-   else if(request.text && botRegexMC.test(request.text) || botMC1.test(request.text)) {
+   else if(request.text && botRegexMC.test(request.text)) {
     this.res.writeHead(200);
     postMessage("You guys take minecraft too seriously");
     this.res.end();
