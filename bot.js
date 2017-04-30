@@ -9,6 +9,7 @@ function respond() {
       botRegexTw = /^\/twitch/i; botRegexSh = /^\/shrug/; 
       botRegexKys = /^\/kys/;
       botRegexSC = new RegExp("SC"); 
+      botSC1 = new RegExp("starcraft"); 
       botRegexClayton = /^\/Clayton/; 
   if(request.text && botRegex.test(request.text)) {
     this.res.writeHead(200);
@@ -33,7 +34,7 @@ function respond() {
     postMessage("¯\\_(ツ)_/¯");
     this.res.end();
   } 
-  else if(request.text && botRegexSC.test(request.text)) {
+  else if(request.text && botRegexSC.test(request.text) || botSC1.test(request.text)) {
     this.res.writeHead(200);
     if (Math.random() < 0.1)
       postMessage("Sorry my dog has testicular cancer");
