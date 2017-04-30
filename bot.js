@@ -37,9 +37,7 @@ function respond() {
   } 
   else if(request.text && botRegexSC.test(request.text) || botSC1.test(request.text) || botSC2.test(request.text)) {
     this.res.writeHead(200);
-    if (Math.random() < 0.05)
-      postMessage("At IHOP");
-    else if (Math.random() < 0.1)
+    if (Math.random() < 0.1)
       postMessage("Sorry my dog has testicular cancer");
     else if (Math.random() < 0.2)
       postMessage("Fuckkk I haven't studied a lick of bio")
