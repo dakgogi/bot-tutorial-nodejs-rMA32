@@ -74,7 +74,7 @@ function respond() {
       postMessage("DIE ALREADY");
     this.res.end();
    }
-   else if(request.text && botRegexHW.test(request.text)) { 
+   else if(request.text && botRegexHW.test(request.text) || botHW1.test(request.text)) { 
     this.res.writeHead(200);
     postMessage("level 3 armor store kreygasm");
     this.res.end();
