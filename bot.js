@@ -9,8 +9,9 @@ function respond() {
       botRegexTw = /^\/twitch/i; botRegexSh = /^\/shrug/; 
       botRegexKys = /^\/kys/;
       botRegexSC = new RegExp("SC"); 
-      botSC1 = new RegExp("starcraft"); 
-      botRegexMN = new RegExp("MC"); 
+      botSC1 = new RegExp("starcraft"); botSC2 = new RegExp("StarCraft"); 
+      botRegexMC = new RegExp("MC"); 
+      botMC1 = new RegExp("minecraft"); botMC2 = new RegExp("Minecraft");
       botRegexClayton = /^\/Clayton/; 
   if(request.text && botRegex.test(request.text)) {
     this.res.writeHead(200);
@@ -35,7 +36,7 @@ function respond() {
     postMessage("¯\\_(ツ)_/¯");
     this.res.end();
   } 
-  else if(request.text && botRegexSC.test(request.text) || botSC1.test(request.text)) {
+  else if(request.text && botRegexSC.test(request.text) || botSC1.test(request.text) || botSC2.test(request.text)) {
     this.res.writeHead(200);
     if (Math.random() < 0.1)
       postMessage("Sorry my dog has testicular cancer");
@@ -64,7 +65,7 @@ function respond() {
     postMessage("https://imgur.com/gallery/qOOvz");
   this.res.end();
   } 
-   else if(request.text && botRegexMN.test(request.text)) {
+   else if(request.text && botRegexMC.test(request.text)|| botMC1.test(request.text) || botMC2.test(request.text)) {
     this.res.writeHead(200);
     postMessage("You guys take minecraft too seriously");
     this.res.end();
