@@ -68,10 +68,14 @@ function respond() {
   } 
    else if(request.text && botRegexMC.test(request.text)) {
     this.res.writeHead(200);
-    if (Math.random() < 0.3)
+    if (Math.random() < 0.2)
      postMessage("You guys take minecraft too seriously");
-     if (Math.random() < 0.6)
+     else if (Math.random() < 0.4)
        postMessage("My desktop is home now lmao, laptop will implode");
+     else if Math.random() < 0.6)
+       postMessage("I have to go to church");
+     else if Math.random() < 0.8) 
+       postMessage("At IHOP");
     else
       postMessage("DIE ALREADY");
     this.res.end();
