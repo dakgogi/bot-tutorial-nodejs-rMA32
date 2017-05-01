@@ -5,9 +5,15 @@ var botID = process.env.BOT_ID;
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
       botRegexCheese = new RegExp("cheese"); 
+      botRegexConstitution = new RegExp("constitution");
   if(request.text && botRegexCheese.test(request.text)) {
     this.res.writeHead(200);
     postMessage("GOVERNMENT CHEESE");
+    this.res.end();
+  } 
+  else if(request.text && botRegexConstitution.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("ARE YOU SAYING THE CONSTITUTION IS ELASTIC AND CHANGES OVER TIME");
     this.res.end();
   } 
   else {
