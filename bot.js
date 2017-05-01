@@ -42,21 +42,21 @@ function respond() {
     if (Math.random() < 0.1)
       postMessage("Sorry my dog has testicular cancer");
     else if (Math.random() < 0.2)
-      postMessage("Fuckkk I haven't studied a lick of bio")
+      postMessage("Fuckkk I haven't studied a lick of bio");
     else if (Math.random() < 0.3)
-      postMessage("Go step on some legos")
+      postMessage("Go step on some legos");
     else if (Math.random() < 0.4)
-      postMessage("I'm heading back to Athens -0-")
+      postMessage("I'm heading back to Athens -0-");
     else if (Math.random() < 0.5)
-      postMessage("I'm waiting for the bus")
+      postMessage("I'm waiting for the bus");
      else if (Math.random() < 0.6)
-      postMessage("I'm going out with some friends tonight lol")
+      postMessage("I'm going out with some friends tonight lol");
      else if (Math.random() < 0.7)
-      postMessage("Sorry guys I have an exam on monday")
+      postMessage("Sorry guys I have an exam on monday");
      else if (Math.random() < 0.8)
-      postMessage("gg I have to go tutor")
+      postMessage("gg I have to go tutor");
      else if (Math.random() < 0.9)
-      postMessage("I have to go eat with my parents")
+      postMessage("I have to go eat with my parents");
      else
       postMessage("Sorry I'm going to the gym");
     this.res.end();
