@@ -21,10 +21,7 @@ function respond() {
   }
   else if(request.text && botRegexKys.test(request.text)) {
     this.res.writeHead(200);
-    if (Math.random() < 0.5)
-      postMessage("http://www.wikihow.com/Tie-a-Noose");
-    else
-      postMessage("https://imgur.com/gallery/k1Ofl"); 
+    postMessage("https://imgur.com/gallery/k1Ofl"); 
     this.res.end();
   } 
   else if(request.text && botRegexTw.test(request.text)) {
