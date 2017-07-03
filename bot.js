@@ -14,6 +14,7 @@ function respond() {
       botRegexHW = new RegExp("hammerwatch"); 
       botHW1 = new RegExp("Hammerwatch");
       botRegexClayton = /^\/Clayton/; 
+      botRegexSleep = new RegExp("SLEEP TIGHT"); 
   if(request.text && botRegex.test(request.text)) {
     this.res.writeHead(200);
     postMessage(cool());
@@ -80,6 +81,11 @@ function respond() {
    else if(request.text && botRegexHW.test(request.text) || botHW1.test(request.text)) { 
     this.res.writeHead(200);
     postMessage("level 3 armor store kreygasm");
+    this.res.end();
+  } 
+  else if(request.text && botRegexSleep.test(request.text)) { 
+    this.res.writeHead(200);
+    postMessage("http://i2.kym-cdn.com/photos/images/original/001/120/799/9fb.jpg");
     this.res.end();
   } 
   else {
