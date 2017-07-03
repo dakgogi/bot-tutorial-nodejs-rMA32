@@ -85,7 +85,10 @@ function respond() {
   } 
   else if(request.text && botRegexSleep.test(request.text)) { 
     this.res.writeHead(200);
+    if (Math.random() < 0.5)
     postMessage("http://i2.kym-cdn.com/photos/images/original/001/120/799/9fb.jpg");
+    else
+    postMessage("https://i.ytimg.com/vi/Sr31ONbU19Q/maxresdefault.jpg");
     this.res.end();
   } 
   else {
