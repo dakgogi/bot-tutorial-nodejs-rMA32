@@ -100,7 +100,7 @@ function respond() {
     else if (Math.random() < 0.7)
     postMessage("https://i.groupme.com/540x559.jpeg.954ded3c508c445f82600883ea63731b");
     else if (Math.random() < 0.8)
-    postMessage("https://pics.onsizzle.com/if-you-see-this-image-while-scrolling-your-news-feed-19769486.png");
+    postMessage("http://i2.kym-cdn.com/photos/images/newsfeed/001/008/367/3a2.jpg");
     else if (Math.random() < 0.9)
     postMessage("https://i.groupme.com/600x582.png.6bf9c8b4a7d74493b109f9e8ccd9d4a0");
     
