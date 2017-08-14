@@ -85,10 +85,25 @@ function respond() {
   } 
   else if(request.text && botRegexSleep.test(request.text)) { 
     this.res.writeHead(200);
-    if (Math.random() < 0.5)
+    if (Math.random() < 0.1)
     postMessage("http://i2.kym-cdn.com/photos/images/original/001/120/799/9fb.jpg");
-    else
-    postMessage("https://i.ytimg.com/vi/Sr31ONbU19Q/maxresdefault.jpg");
+    else if (Math.random() < 0.2)
+    postMessage("http://i0.kym-cdn.com/photos/images/original/001/104/942/fa9.png");
+    else if (Math.random() < 0.3)
+    postMessage("https://i.groupme.com/588x793.jpeg.aaf1d37fd02a4574be3786e81693214c");
+    else if (Math.random() < 0.4)
+    postMessage("https://i.groupme.com/501x598.png.049539f8f3874f5e9e8e7df6425ee2e6");
+    else if (Math.random() < 0.5)
+    postMessage("https://i.groupme.com/848x1000.jpeg.1dab63a34e824ca5a1649e5c631db590");
+    else if (Math.random() < 0.6)
+    postMessage("https://i.groupme.com/600x582.jpeg.a9316c1310bf4950b119ee5550bfc6b7");
+    else if (Math.random() < 0.7)
+    postMessage("https://i.groupme.com/540x559.jpeg.954ded3c508c445f82600883ea63731b");
+    else if (Math.random() < 0.8)
+    postMessage("https://pics.onsizzle.com/if-you-see-this-image-while-scrolling-your-news-feed-19769486.png");
+    else if (Math.random() < 0.9)
+    postMessage("https://i.groupme.com/600x582.png.6bf9c8b4a7d74493b109f9e8ccd9d4a0");
+    
     this.res.end();
   } 
   else {
