@@ -7,7 +7,7 @@ function respond() {
   var request = JSON.parse(this.req.chunks[0]),
       botRegex = /^\/cool guy/; 
       botRegexTw = /^\/twitch/i; botRegexSh = /^\/shrug/; 
-      botRegexKys = /^\/kys/;
+      botRegexKms = /^\/kms/;
       botRegexSC = new RegExp("SC"); 
       botSC1 = new RegExp("starcraft"); botSC2 = new RegExp("StarCraft"); 
       botRegexMC = new RegExp("MC"); 
@@ -20,7 +20,7 @@ function respond() {
     postMessage(cool());
     this.res.end();
   }
-  else if(request.text && botRegexKys.test(request.text)) {
+  else if(request.text && botRegexKms.test(request.text)) {
     this.res.writeHead(200);
     postMessage("https://imgur.com/gallery/k1Ofl"); 
     this.res.end();
