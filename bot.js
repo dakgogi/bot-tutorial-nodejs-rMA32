@@ -53,10 +53,8 @@ function respond() {
       postMessage("Sorry guys I have an exam on monday");
      else if (Math.random() < 0.8)
       postMessage("gg I have to go tutor");
-     else if (Math.random() < 0.85)
-      postMessage("I have to go eat with my parents");
-     else
-      postMessage("Sorry I'm going to the gym");
+     else if (Math.random() < 0.9)
+      postMessage("Min ur nuke is shit");
     this.res.end();
   } 
   else if(request.text && botRegexClayton.test(request.text)) { 
