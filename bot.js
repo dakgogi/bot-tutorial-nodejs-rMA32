@@ -4,8 +4,8 @@ var botID = process.env.BOT_ID;
 
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
-      botRegexAncap = new RegExp("ancap","Ancap"); 
-      botRegexDildo = new RegExp("dildo","Dildo");
+      botRegexAncap = new RegExp("ancap"); 
+      botRegexDildo = new RegExp("dildo");
   if(request.text && botRegexAncap.test(request.text)) {
     this.res.writeHead(200);
     postMessage("Government regulation is necessary for a strong economy");
