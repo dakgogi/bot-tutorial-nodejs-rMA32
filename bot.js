@@ -6,10 +6,22 @@ function respond() {
   var request = JSON.parse(this.req.chunks[0]),
       botRegexAncap = new RegExp("ancap"); 
       botRegexDildo = new RegExp("dildo");
+  
+  
   if(request.text && botRegexAncap.test(request.text)) {
-    this.res.writeHead(200);
-    postMessage("Government regulation is necessary for a strong economy");
-    this.res.end();
+      switch (getRndInteger(0,1)) {
+    case 0:
+        this.res.writeHead(200);
+        postMessage("Government regulation is necessary for a strong economy");
+        this.res.end();
+        break;
+    case 1:
+        this.res.writeHead(200);
+        postMessage("Having a European superstate seems like a good idea");
+        this.res.end();
+        break;
+}
+   
   } 
   else if(request.text && botRegexDildo.test(request.text)) {
     this.res.writeHead(200);
@@ -58,10 +70,9 @@ function postMessage(response) {
   botReq.end(JSON.stringify(body));
 }
 
-function getRandomInt(min, max) {
-  return Math.floor(Math.random() * (max - min)) + min;
+function getRndInteger(min, max) {
+    return Math.floor(Math.random() * (max - min) ) + min;
 }
-
 
 exports.respond = respond;
 
