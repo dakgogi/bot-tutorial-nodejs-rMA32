@@ -81,7 +81,7 @@ function respond() {
     postMessage("level 3 armor store kreygasm");
     this.res.end();
   } 
-  else if(request.text && botRegexSleep.test(request.text)) { 
+  /*else if(request.text && botRegexSleep.test(request.text)) { 
     this.res.writeHead(200);
     if (Math.random() < 0.1)
     postMessage("http://i2.kym-cdn.com/photos/images/original/001/120/799/9fb.jpg");
@@ -103,6 +103,57 @@ function respond() {
     postMessage("https://i.groupme.com/600x582.png.6bf9c8b4a7d74493b109f9e8ccd9d4a0");
     
     this.res.end();
+  }  */
+  
+  if(request.text && botRegexSleep.test(request.text)) {
+      switch (getRndInteger(0,10)) {
+    case 0:
+        this.res.writeHead(200);
+        postMessage("http://i2.kym-cdn.com/photos/images/original/001/120/799/9fb.jpg");
+        this.res.end();
+        break;
+    case 1:
+        this.res.writeHead(200);
+        postMessage("http://i0.kym-cdn.com/photos/images/original/001/104/942/fa9.png");
+        this.res.end();
+        break;
+    case 2:
+        this.res.writeHead(200);
+        postMessage("https://i.groupme.com/588x793.jpeg.aaf1d37fd02a4574be3786e81693214c");
+        this.res.end();
+        break;
+     case 3:
+        this.res.writeHead(200);
+        postMessage("https://i.groupme.com/501x598.png.049539f8f3874f5e9e8e7df6425ee2e6");
+        this.res.end();
+        break;         
+     case 4:
+        this.res.writeHead(200);
+        postMessage("https://i.groupme.com/848x1000.jpeg.1dab63a34e824ca5a1649e5c631db590");
+        this.res.end();
+        break;
+     case 5:
+        this.res.writeHead(200);
+        postMessage("https://i.groupme.com/600x582.jpeg.a9316c1310bf4950b119ee5550bfc6b7");
+        this.res.end();
+        break;
+     case 6:
+        this.res.writeHead(200);
+        postMessage("https://i.groupme.com/540x559.jpeg.954ded3c508c445f82600883ea63731b");
+        this.res.end();
+        break;         
+    case 7:
+        this.res.writeHead(200);
+        postMessage("http://i2.kym-cdn.com/photos/images/newsfeed/001/008/367/3a2.jpg");
+        this.res.end();
+        break;
+    case 8:
+        this.res.writeHead(200);
+        postMessage("https://i.groupme.com/600x582.png.6bf9c8b4a7d74493b109f9e8ccd9d4a0");
+        this.res.end();
+        break;
+}
+   
   } 
   else {
     console.log("Something broke :(");
@@ -145,7 +196,7 @@ function postMessage(response) {
   });
   botReq.end(JSON.stringify(body));
 }
-function getRandomInt(min, max) {
-  return Math.floor(Math.random() * (max - min)) + min;
+function getRndInteger(min, max) {
+    return Math.floor(Math.random() * (max - min) ) + min;
 }
 exports.respond = respond;
