@@ -9,7 +9,7 @@ function respond() {
   
   
   if(request.text && botRegexAncap.test(request.text)) {
-      switch (getRndInteger(0,1)) {
+      switch (getRndInteger(0,2)) {
     case 0:
         this.res.writeHead(200);
         postMessage("Government regulation is necessary for a strong economy");
