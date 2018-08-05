@@ -106,7 +106,7 @@ function respond() {
   }  */
   
   if(request.text && botRegexSleep.test(request.text)) {
-      switch (getRndInteger(0,10)) {
+      switch (getRndInteger(0,11)) {
     case 0:
         this.res.writeHead(200);
         postMessage("http://i2.kym-cdn.com/photos/images/original/001/120/799/9fb.jpg");
@@ -150,6 +150,16 @@ function respond() {
     case 8:
         this.res.writeHead(200);
         postMessage("https://i.groupme.com/600x582.png.6bf9c8b4a7d74493b109f9e8ccd9d4a0");
+        this.res.end();
+        break;
+    case 9:
+        this.res.writeHead(200);
+        postMessage("https://i.groupme.com/1080x1440.jpeg.b4f76593fd5144b88687a43614809dd0.large");
+        this.res.end();
+        break;
+    case 10:
+        this.res.writeHead(200);
+        postMessage("https://i.groupme.com/1080x1440.jpeg.b6d460655bae4faa913a2b37134a9d78.large");
         this.res.end();
         break;
 }
