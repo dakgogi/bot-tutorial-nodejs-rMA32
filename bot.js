@@ -4,7 +4,7 @@ var botID = process.env.BOT_ID;
 
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
-      botRegexAncap = new RegExp("ancap"); 
+      botRegexAncap = new RegExp("ancap|Ancap"); 
       botRegexDildo = new RegExp("dildo");
   
   
