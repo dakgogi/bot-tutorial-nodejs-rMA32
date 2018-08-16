@@ -83,7 +83,7 @@ function respond() {
   } 
   
   if(request.text && botRegexSleep.test(request.text)) {
-      switch (getRndInteger(0,12)) {
+      switch (getRndInteger(0,13)) {
     case 0:
         this.res.writeHead(200);
         postMessage("http://i2.kym-cdn.com/photos/images/original/001/120/799/9fb.jpg");
@@ -142,6 +142,11 @@ function respond() {
     case 11:
         this.res.writeHead(200);
         postMessage("https://i.groupme.com/750x644.jpeg.d2e4d1c11ce9474196eeb67d2cc629cc.large");
+        this.res.end();
+        break;
+    case 12:
+        this.res.writeHead(200);
+        postMessage("https://i.groupme.com/739x760.jpeg.c00ced99cbf04aee96f35595f60c7aa3.large");
         this.res.end();
         break;
 }
