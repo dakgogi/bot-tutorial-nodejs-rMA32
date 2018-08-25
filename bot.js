@@ -9,7 +9,7 @@ function respond() {
       botRegexStatSheet = new RegExp("stat sheet"|"Stat sheet"|"STAT SHEET");
                                      
     if(request.text && botRegexStatSheet.test(request.text)) {
-          switch (getRndInteger(0,1)) {
+          switch (getRndInteger(0,2)) {
     case 0:
         this.res.writeHead(200);
         postMessage("DID SOMEBODY SAY STAT SHEET!!!!!?!?!?!?!?!?!?!");
@@ -19,7 +19,7 @@ function respond() {
               this.res.end();
         break;
           }     
-                                  
+    }                          
   
   
   if(request.text && botRegexAncap.test(request.text)) {
