@@ -14,6 +14,7 @@ function respond() {
         this.res.writeHead(200);
         postMessage("DID SOMEBODY SAY STAT SHEET!!!!!?!?!?!?!?!?!?!");
         this.res.end();
+              break;
             case 1:
               this.res.writeHead(200);
         postMessage("*FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP*");
