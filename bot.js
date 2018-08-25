@@ -9,17 +9,16 @@ function respond() {
       botRegexStatSheet = new RegExp("stat sheet|Stat sheet|STAT SHEET");
                                      
     if(request.text && botRegexStatSheet.test(request.text)) {
-          switch (getRndInteger(0,2)) {
-    case 0:
-        this.res.writeHead(200);
-        postMessage("DID SOMEBODY SAY STAT SHEET!!!!!?!?!?!?!?!?!?!");
-        this.res.end();
-              break;
-            case 1:
-              this.res.writeHead(200);
-        postMessage("*FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP*");
-        this.res.end();
-            
+      switch (getRndInteger(0,2)) {
+        case 0:
+          this.res.writeHead(200);
+          postMessage("DID SOMEBODY SAY STAT SHEET!!!!!?!?!?!?!?!?!?!");
+          this.res.end();
+        break;
+        case 1:
+          this.res.writeHead(200);
+          postMessage("*FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP*");
+          this.res.end();    
         break;
           }     
     }                          
