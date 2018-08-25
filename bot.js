@@ -6,19 +6,17 @@ function respond() {
   var request = JSON.parse(this.req.chunks[0]),
       botRegexAncap = new RegExp("ancap|Ancap"); 
       botRegexDildo = new RegExp("dildo|Dildo");
-      botRegexStatSheet = new RegExp("stat sheet|Stat sheet|STAT SHEET");
+      botRegexStatSheet = new RegExp("stat sheet|Stat sheet");
                                      
     if(request.text && botRegexStatSheet.test(request.text)) {
-      switch (getRndInteger(0,2)) {
+      switch (getRndInteger(0,1)) {
         case 0:
           this.res.writeHead(200);
           postMessage("DID SOMEBODY SAY STAT SHEET!!!!!?!?!?!?!?!?!?!");
           this.res.end();
-        break;
-        case 1:
           this.res.writeHead(200);
           postMessage("*FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP*");
-          this.res.end();    
+          this.res.end();  
         break;
           }     
     }                          
