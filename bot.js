@@ -6,7 +6,7 @@ function respond() {
   var request = JSON.parse(this.req.chunks[0]),
       botRegexAncap = new RegExp("ancap|Ancap"); 
       botRegexDildo = new RegExp("dildo|Dildo");
-      botRegexStatSheet = new RegExp("stat sheet"|"Stat sheet"|"STAT SHEET"
+      botRegexStatSheet = new RegExp("stat sheet"|"Stat sheet"|"STAT SHEET");
                                      
     if(request.text && botRegexStatSheet.test(request.text)) {
           switch (getRndInteger(0,1)) {
