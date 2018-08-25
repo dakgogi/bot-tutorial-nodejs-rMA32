@@ -11,12 +11,13 @@ function respond() {
     if(request.text && botRegexStatSheet.test(request.text)) {
       switch (getRndInteger(0,1)) {
         case 0:
+           this.res.writeHead(200);
+          postMessage("*FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP*");
+          this.res.end();  
           this.res.writeHead(200);
           postMessage("DID SOMEBODY SAY STAT SHEET!!!!!?!?!?!?!?!?!?!");
           this.res.end();
-          this.res.writeHead(200);
-          postMessage("*FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP**FAP*");
-          this.res.end();  
+         
         break;
           }     
     }                          
